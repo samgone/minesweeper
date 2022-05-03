@@ -1,0 +1,163 @@
+body {
+    background-color: #0f252b;
+    background-image: url("https://www.transparenttextures.com/patterns/crissxcross.png");
+}
+
+
+.reset {
+    display: flex;
+    margin: 25px auto;
+    background: linear-gradient(#c2c2cd , white , #c2c2cd);
+    border: 5px solid #d7a553;
+    font-size: 30px;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    align-items: center;    
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    justify-content: space-around;
+    background-color: #B4B5BE;
+    margin: auto;
+    border: 5px solid #d7a553;
+    width: 320px;
+    height: 400px;
+    transition: .2s;
+}
+
+.grid div {
+    height: 8.5%;
+    width: 8.5%;
+    border: 2px solid rgb(17, 89, 91);
+}
+
+.flag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bomb {
+    background: linear-gradient(#c2c2cd , white , #c2c2cd);
+ /* background-color: hsl(37, 62%, 58%); */
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+;
+}
+
+.bomb:hover {
+    background: #d7a553;
+}
+
+.empty {
+    background: linear-gradient(#c2c2cd , white , #c2c2cd);
+    color: #062e3d;
+    font-family: 'Merriweather', serif;
+    font-size: 20px;
+    text-align: center;
+    
+}
+.empty:hover {
+    background: #d7a553;
+}
+
+.empty.checked {
+    background: unset;
+    background: linear-gradient(#6a6a78 , white)
+}
+
+.winner-outer{
+    display: grid;
+    background: hsla(37, 62%, 58%, 0);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    /* hide this modal until we need it */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.winner-outer.open{
+    opacity:1;
+    pointer-events: all;
+}
+
+.winner-inner{
+    width: 200px;
+    height: 100px;
+    padding:2rem;
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #d7a553;
+}
+.loser-outer{
+    display: grid;
+    background: hsla(0, 63%, 56%, 0);
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    /* hide this modal until we need it */
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.loser-outer.open{
+    opacity:1;
+    pointer-events: all;
+}
+
+.loser-inner{
+    width: 200px;
+    height: 100px;
+    padding:2rem;
+    border-radius: 5px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid #d13b2d;
+}
+
+@media screen and (min-width: 600px){
+    .grid{
+        width: 500px;
+        height: 500px;
+        transition: .2s;
+    }
+
+    .empty{
+        font-size: 30px;
+    }
+
+    .bomb{
+        font-size: 30px;
+    }
+    .loser-inner{
+        width: 400px;
+        height: 200px;
+    }
+    .winner-inner{
+        width: 400px;
+        height: 200px;
+    }
+}
+    
